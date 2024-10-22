@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <table style="border: 1PX solid black; margin: auto; width: 100%; padding: 1%;">
+        <tr>
+            <td id="labelA" ><label>A</label><select  name="A" id="selectA" style="margin: auto; height: 2rem; width:90% "onchange="changeA()">
+                <option  value="0">---select---</option>
+                <option value="1">---ONE---</option>
+                <option value="2">---TWO---</option>
+                <option value="3">---THREE---</option>
+                </select>
+            </td>   
+            
+                
+            <td id="labelB"><label>B</label><select name="B" id="selectB" style="margin: auto; height: 2rem; width:90% " onchange="changeB()">
+                <option  value="0">---select---</option>
+                <option  value="1">---MAJOR---</option>
+                <option  value="2">---MINOR---</option>
+                <option  value="3">---OTHER---</option>
+                
+            </select>
+             </td>
+        </tr>
+        <tr>
+            <td id="labelC"><label>C</label><select  name="C" id="selectC" style="margin: auto; height: 2rem; width:90% " onchange="changeC()">
+                <option  value="0">---select---</option>
+                <option value="1">---YES---</option>
+                <option value="2">---NO---</option>
+            </select>
+            </td>
+            <td id="labelD"><label>D</label><select name="D" id="selectD" style="margin: auto; height: 2rem; width:90% " onchange="changeD()">
+                <option  value="0">---select---</option>
+                <option  value="1">MAJOR</option>
+                <option  value="2">MINOR</option>
+                <option  value="3">OTHER</option>
+            </select></td>
+            <td id="labelE"><label>E</label><select name="E" id="selectE" style="margin: auto; height: 2rem; width:90% " onchange="changeE()">
+                <option value="0">---select---</option>
+                <option value="1">---GOOD---</option>
+                <option value="2">---BETTER---</option>
+                <option value="3">---BEST---</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td id="labelF"><label>F</label><select name="F" id="selectF" style="margin: auto; height: 2rem; width:90% " onchange="changeF()">
+                <option value="0">---select---</option>
+                <option value="1">---YES---</option>
+                <option value="2">---NO---</option>
+            </select></td>
+            <td id="labelG"><label>G</label><select name="G" id="selectG" style="margin: auto; height: 2rem; width:90% " onchange="changeG()">
+                <option value="0">---select---</option>
+                <option value="1">---BOY---</option>
+                <option value="2">---GIRL---</option>
+            </select></td>
+            <td id="labelH"><label>H</label><select name="H" id="selectH" style="margin: auto; height: 2rem; width:90% " onchange="changeH()">
+                <option value="0">---select---</option>
+                <option  value="1">---MAJOR(A)---</option>
+                <option  value="2">---MAJOR(B)---</option>
+                <option  value="3">---MAJOR(C)---</option>
+                <option  value="4">---MAJOR(D)---</option>
+                <option  value="5">---OTHER---</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td id="labelI"><label>I</label><select name="I" id="selectI" style="margin: auto; height: 2rem; width:90% " onchange="changeI()">
+                <option value="0">---select---</option>
+                <option value="1">---YES---</option>
+                <option value="2">---NO---</option>
+            </select></td>
+            <td id="labelJ"><label>J</label><select  name="J"id="selectJ" style="margin: auto; height: 2rem; width:90% " onchange="changeJ()">
+                <option value="0">---select---</option>
+                <option value="1">---MALE---</option>
+                <option value="2">---FEMALE---</option>
+            </select></td>
+            <td id="labelK"><label>K</label><select name="K" id="selectK" style="margin: auto; height: 2rem; width:90% " onchange="changeK()">
+                <option value="0">---select---</option>
+                <option  value="1">MAJOR</option>
+                <option  value="2">MINOR</option>
+                <option  value="3">OTHER</option>
+            </select></td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+
+window.onload=function (){
+
+changeA()
+changeB()
+changeC()
+changeF()
+changeI()
+
+}
+
+
+
+
+    function changeC(){
+        const val=document.getElementById("selectC").value
+        const dtd=document.getElementById("labelD")
+
+        if(val !=1){
+            dtd.style.display="none";
+            document.getElementById('labelE').value=0;
+            
+            
+        }else{
+            dtd.style.display="table-cell"
+
+        }
+        changeD()
+        
+    }
+    function changeD(){
+        const val=document.getElementById('selectD').value
+        const etd=document.getElementById("labelE")
+
+        if(val !=1){
+            etd.style.display="none";
+            
+            
+        }else{
+            etd.style.display="table-cell"
+
+        }
+    }
+
+
+
+    function changeF(){
+        const val=document.getElementById("selectF").value
+        const gtd=document.getElementById("labelG")
+        const htd=document.getElementById("labelH")
+
+        if(val !=1){
+            gtd.style.display="none";
+            htd.style.display="none";
+            
+            
+            
+            
+        }else{
+            gtd.style.display="table-cell"
+            htd.style.display="table-cell"
+
+        }
+
+
+        
+        
+        
+    }
+    function changeI(){
+        const val=document.getElementById("selectI").value
+        const jtd=document.getElementById("labelJ")
+        const ktd=document.getElementById("labelK")
+
+        if(val !=1){
+            jtd.style.display="none";
+            ktd.style.display="none";
+            
+            
+            
+            
+        }else{
+            jtd.style.display="table-cell"
+            ktd.style.display="table-cell"
+            
+
+        }
+    }
+
+
+    function changeB() {
+        const valueB =document.getElementById(B)("selectB").value;
+        const valueD =document.getElementById("selectD").value;
+        const btd=document.getElementById("labelB")
+        const dtd=document.getElementById("labelD")
+        const ktd=document.getElementById("labelK")
+
+        if( valueB!=1){
+
+            
+            
+
+            
+        }else{
+            dtd.style.display="table-cell"
+            ktd.style.display="table-cell"
+
+
+
+        }
+
+
+
+
+    }
+
+    function changeD (){
+        const valueD =document.getElementById("selectD").value;
+        const dtd=document.getElementById("labelD")
+        const valueB=document.getElementById("selectB").value
+
+
+        if (valueB=1 ){
+
+            
+           
+        }if(valueB=2){
+            alert("Error")
+            document.getElementById("selectD").value=0;
+        
+        }else{
+            dtd.style.display="table-cell"
+        }
+    }
+    function changeK (){
+        const valueK =document.getElementById("selectK").value;
+        const ktd=document.getElementById("labelK")
+        
+
+
+        if (valueK!=1 ){
+            alert("Error")
+            document.getElementById("selectK").value=0;
+           
+        }else{
+            ktd.style.display="table-cell"
+        }
+    }
+
+</script>
+</html>
